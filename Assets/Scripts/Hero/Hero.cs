@@ -5,7 +5,6 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float lives = 5;
     [SerializeField] private float jumpForce = 1f;
     private bool isGrounded = true;
     [SerializeField] private float _radiusGroundCheck = 0.01f;
@@ -32,7 +31,7 @@ public class Hero : MonoBehaviour
 
     private void Update()
     {
-        if (isGrounded) State = States.idle;
+        if (isGrounded&&_animator.GetInteger("state")!=10) State = States.idle;
         if (Input.GetButton("Horizontal")) Run();
         Jump();
 
@@ -40,11 +39,18 @@ public class Hero : MonoBehaviour
 
     private void Run()
     {
-        if (isGrounded) State = States.run;
+        if (isGrounded&&_animator.GetInteger("state")!=10) State = States.run;
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
         transform.position =
             Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
-        _spriteRenderer.flipX = dir.x < 0.0f;
+        if (dir.x < 0.0f)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private void Jump()
@@ -77,7 +83,7 @@ public class Hero : MonoBehaviour
     private void CheckOnGround()
     {
         isGrounded = Physics2D.OverlapCircle(_groundCheckObj.transform.position, _radiusGroundCheck, _groundMask);
-        if (!isGrounded) State = States.jump;
+        if (!isGrounded&&_animator.GetInteger("state")!=10) State = States.jump;
     }
 
     private void OnDrawGizmos()
@@ -92,7 +98,7 @@ public class Hero : MonoBehaviour
         set { _animator.SetInteger("state", (int)value); }
     }
 
-    public enum States
+    private enum States
     {
         idle,
         run,
