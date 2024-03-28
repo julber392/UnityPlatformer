@@ -14,15 +14,9 @@ public class Health : MonoBehaviour
         currentHP = maxHP;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ChangeHealth(-10);
-        }
-    }
+   
 
-    private void ChangeHealth(int value)
+    public void ChangeHealth(int value)
     {
         currentHP += value;
         if (currentHP <= 0)

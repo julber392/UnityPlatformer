@@ -13,10 +13,15 @@ public class AttackController : MonoBehaviour
     public LayerMask damageableLayerMask;
     private Animator _animator;
     private float timer;
+    private Health playerHP;
+    public int vampirism=1;
+    public event Action<float> AttackChanged;
+    public event Action<float> AttackSpeedChanged;
 
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+        playerHP = GetComponent<Health>();
     }
 
     private void Update()
@@ -35,6 +40,10 @@ public class AttackController : MonoBehaviour
                     for (int i = 0; i < enemies.Length; i++)
                     {
                         enemies[i].GetComponent<DamagebleObject>().TakeDamage(damage);
+                        if (playerHP.currentHP < playerHP.maxHP)
+                        {
+                            playerHP.ChangeHealth(vampirism);
+                        }
                     }
                 }
 
@@ -60,5 +69,16 @@ public class AttackController : MonoBehaviour
     {
         Gizmos.color=Color.green;
         Gizmos.DrawWireSphere(attackPoint.position,range);
+    }
+
+    public void ChangeAttack(float attack)
+    {
+        damage = attack;
+        AttackChanged?.Invoke(attack);
+    }
+    public void ChangeAttackSpeed(float attack)
+    {
+        attackDelay = attack;
+        AttackSpeedChanged?.Invoke(attack);
     }
 }
