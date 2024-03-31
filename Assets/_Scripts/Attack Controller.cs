@@ -14,9 +14,14 @@ public class AttackController : MonoBehaviour
     private Animator _animator;
     private float timer;
     private Health playerHP;
-    public int vampirism=1;
+    public int vampirism;
     public event Action<float> AttackChanged;
     public event Action<float> AttackSpeedChanged;
+
+    private void Awake()
+    {
+        vampirism = (int)(damage / 20);
+    }
 
     private void Start()
     {
