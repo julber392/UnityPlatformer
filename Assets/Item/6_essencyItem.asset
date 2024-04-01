@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 970fdb3f356a74be98726c4f019a5e09, type: 3}
-  m_Name: Item
+  m_Name: 6_essencyItem
   m_EditorClassIdentifier: 
-  Id: 0
-  Name: Item
-  Icon: {fileID: 0}
-  price: 0
-  stackable: 0
+  Id: 6
+  Name: essencyitem
+  Icon: {fileID: -1918287734, guid: 1914d95466e3d4341a618c35a56d5f82, type: 3}
+  price: 12
+  stackable: 1

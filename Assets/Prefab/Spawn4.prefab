@@ -104,6 +104,18 @@ PrefabInstance:
       propertyPath: point
       value: 
       objectReference: {fileID: 8143078912148727151}
+    - target: {fileID: 6338863462852927109, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: attackDelay
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338863462852927109, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: attackPower
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _healthPoints
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

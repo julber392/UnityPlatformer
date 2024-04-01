@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject deathScreen;
+    void Awake()
     {
-        
+        deathScreen.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeathScreenActivate()
     {
-        
+        deathScreen.SetActive(true);
+    }
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

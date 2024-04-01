@@ -1567,8 +1567,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "WASD-movement,  \nleft mouse button-attack,\nESC-pause,  TAB-inventory\nExiting
-    to the main menu saves money"
+  m_text: 'A\D-movement,  space-jump
+
+    left mouse button-attack,
+
+    ESC-pause, 
+    TAB-inventory
+
+    Exiting to the main menu saves money'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0094eb226bb93497c83574632daffcb0, type: 2}
   m_sharedMaterial: {fileID: -5692878623569609618, guid: 0094eb226bb93497c83574632daffcb0, type: 2}

@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField]
     public int maxHP = 100;
     public int currentHP;
+    public DeathScreen deathScreen;
     public event Action<float> HealthChanged;
 
     private void Start()
@@ -32,7 +33,8 @@ public class Health : MonoBehaviour
 
     private void Death()
     {
+        Debug.Log("13");
         HealthChanged?.Invoke(0);
-        Debug.Log("You are death");
+        deathScreen.DeathScreenActivate();
     }
 }
