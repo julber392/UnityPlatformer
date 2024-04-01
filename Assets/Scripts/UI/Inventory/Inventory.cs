@@ -9,11 +9,9 @@ public class Inventory : MonoBehaviour
     [SerializeField] public int sizeInventory;
     public int countSlot;
     public GameObject prefabToSpawn;
-    private GameObject player;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < StartItems.Count; i++)
         {
             AddItem(StartItems[i]);
@@ -46,8 +44,9 @@ public class Inventory : MonoBehaviour
             }
             else
             {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
                 prefabToSpawn.GetComponent<ObjectOnGround>().item = item;
-                Instantiate(prefabToSpawn, player.transform.position + new Vector3(2.5f, 0.5f, 0),
+                Instantiate(prefabToSpawn, player.transform.position + new Vector3(1, 0.5f, 0),
                     Quaternion.identity);
 
             }

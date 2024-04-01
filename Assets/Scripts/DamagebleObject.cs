@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,14 +5,6 @@ using UnityEngine;
 public class DamagebleObject : MonoBehaviour
 {
     [SerializeField] private float _healthPoints;
-    private Transform _transform;
-    public Item[] _items;
-    [SerializeField]private GameObject prefabToSpawn;
-    private void Start()
-    {
-
-        _transform = GetComponent<Transform>();
-    }
 
     public void TakeDamage(float damage)
     {
@@ -26,18 +17,9 @@ public class DamagebleObject : MonoBehaviour
 
         Debug.Log("Hit");
     }
+
     private void Death()
     {
-        DropItems(_transform);
         Destroy(gameObject);
-    }
-    void DropItems(Transform _position)
-    {
-        for (int i = 0; i < _items.Length; i++)
-        {
-            prefabToSpawn.GetComponent<ObjectOnGround>().item = _items[i];
-            Instantiate(prefabToSpawn, _position.position + new Vector3(1, 0.5f, 0),
-                Quaternion.identity);
-        }
     }
 }

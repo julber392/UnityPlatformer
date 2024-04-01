@@ -1,10 +1,11 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
-    [SerializeField] public float speed = 3f;
-    [SerializeField] public float jumpForce = 1f;
+    [SerializeField] private float speed = 3f;
+    [SerializeField] private float jumpForce = 1f;
     private bool isGrounded = true;
     [SerializeField] private float _radiusGroundCheck = 0.01f;
     [SerializeField] private GameObject _groundCheckObj;
@@ -15,7 +16,7 @@ public class Hero : MonoBehaviour
     public int jumpValueIteration = 60;
     private SpriteRenderer _spriteRenderer;
     private Animator _animator;
-    public event Action<float> MoveSpeedChanged;
+
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -30,7 +31,7 @@ public class Hero : MonoBehaviour
 
     private void Update()
     {
-        if (isGrounded&&!(_animator.GetCurrentAnimatorStateInfo(0).IsName("HeroAttack1")||_animator.GetCurrentAnimatorStateInfo(0).IsName("HeroAttack2"))) State = States.idle;
+        if (isGrounded&&_animator.GetInteger("state")!=10) State = States.idle;
         if (Input.GetButton("Horizontal")) Run();
         Jump();
 
@@ -38,7 +39,7 @@ public class Hero : MonoBehaviour
 
     private void Run()
     {
-        if (isGrounded&&!(_animator.GetCurrentAnimatorStateInfo(0).IsName("HeroAttack1")||_animator.GetCurrentAnimatorStateInfo(0).IsName("HeroAttack2"))) State = States.run;
+        if (isGrounded&&_animator.GetInteger("state")!=10) State = States.run;
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
         transform.position =
             Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
@@ -82,7 +83,7 @@ public class Hero : MonoBehaviour
     private void CheckOnGround()
     {
         isGrounded = Physics2D.OverlapCircle(_groundCheckObj.transform.position, _radiusGroundCheck, _groundMask);
-        if (!isGrounded&&!(_animator.GetCurrentAnimatorStateInfo(0).IsName("HeroAttack1")||_animator.GetCurrentAnimatorStateInfo(0).IsName("HeroAttack2"))) State = States.jump;
+        if (!isGrounded&&_animator.GetInteger("state")!=10) State = States.jump;
     }
 
     private void OnDrawGizmos()
@@ -102,11 +103,5 @@ public class Hero : MonoBehaviour
         idle,
         run,
         jump
-    }
-    public void ChangeMoveSpeed(float _speed,float _jumpforce)
-    {
-        speed = _speed;
-        jumpForce = _jumpforce;
-        MoveSpeedChanged?.Invoke(_speed);
     }
 }
