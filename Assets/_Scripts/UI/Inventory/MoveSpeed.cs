@@ -8,7 +8,7 @@ public class MoveSpeed : MonoBehaviour
     private void Awake()
     {
         _text=GetComponent<TextMeshProUGUI>();
-        _text.text=(_moveSpeed.speed*10).ToString();
+        _text.text=(_moveSpeed.speed*10).ToString("0.0");
     }
 
     private void OnEnable()
@@ -23,6 +23,6 @@ public class MoveSpeed : MonoBehaviour
 
     private void MoveChanged(float moveSpeed)
     {
-        _text.text = (moveSpeed*10).ToString();
+        _text.text = (moveSpeed*10).ToString("0.0");
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6811645164327782679}
   - component: {fileID: 583918926545254232}
   - component: {fileID: 7108319135268021413}
-  - component: {fileID: 6123753448757505313}
+  - component: {fileID: 2437759677240339704}
   m_Layer: 8
   m_Name: _SwordObject
   m_TagString: item
@@ -127,8 +127,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6123753448757505313
-BoxCollider2D:
+--- !u!70 &2437759677240339704
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -159,16 +159,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03132546, y: 0.0040859208}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.84375, y: 0.84375}
-    newSize: {x: 1.125, y: 0.28125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9939387, y: 0.3057655}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.010238141, y: -0.08190134}
+  m_Size: {x: 0.6594655, y: 0.6799474}
+  m_Direction: 0

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 955420653808988574}
   spawnDelay: 10
-  countMonsters: 2
+  countMonsters: 1
 --- !u!1001 &3176006237693898674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,6 +56,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1157370469680813380}
     m_Modifications:
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a2b83348d9a7479199d5c07855a5fdc, type: 2}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 75573f382499940f9b06f9fd2e56ad02, type: 2}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b49391307219c495db26610f4bcfbdd7, type: 2}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: b49391307219c495db26610f4bcfbdd7, type: 2}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8326988c3917646bdbf19e105f2d93c9, type: 2}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _items.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8326988c3917646bdbf19e105f2d93c9, type: 2}
     - target: {fileID: 2400742808528903724, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
       propertyPath: m_Name
       value: Monster2
@@ -64,6 +92,14 @@ PrefabInstance:
       propertyPath: point
       value: 
       objectReference: {fileID: 1157370469680813380}
+    - target: {fileID: 4419317698990623006, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: attackDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419317698990623006, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: attackPower
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8482142105354977789, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3574767

@@ -114,8 +114,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
       propertyPath: _healthPoints
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _items.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _items.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a2b83348d9a7479199d5c07855a5fdc, type: 2}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _items.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a2b83348d9a7479199d5c07855a5fdc, type: 2}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2845d3c28229a4ab6be8771bb2e0f3b1, type: 2}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _items.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5411568823a5b47639d72ac8a3cd119f, type: 2}
+    - target: {fileID: 7806246760139916642, guid: 5ce50f9bdc0ae4403987077b05dda129, type: 3}
+      propertyPath: _items.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: bce0624f71c47479e84255f7a641c21d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
