@@ -57,6 +57,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1157370469680813380}
     m_Modifications:
     - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
+      propertyPath: _healthPoints
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273721055332746167, guid: 9c5b258f71a0647e2bb8b764d1b15e59, type: 3}
       propertyPath: _items.Array.size
       value: 6
       objectReference: {fileID: 0}

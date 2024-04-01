@@ -101,6 +101,10 @@ PrefabInstance:
       value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 6769255337325073116, guid: 872082227605940108c2e095000ce648, type: 3}
+      propertyPath: _healthPoints
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769255337325073116, guid: 872082227605940108c2e095000ce648, type: 3}
       propertyPath: _items.Array.size
       value: 6
       objectReference: {fileID: 0}

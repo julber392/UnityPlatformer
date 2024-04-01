@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamagebleObject : MonoBehaviour
 {
@@ -20,15 +21,21 @@ public class DamagebleObject : MonoBehaviour
         {
             Death();
         }
-
         Debug.Log("Hit");
     }
     private void Death()
     {
         DropItems(_transform);
-        if(!gameObject.CompareTag("Player"))
-        gameObject.GetComponent<EnemyPatrol>().point.GetComponent<Spawner>().DeathMonster(1);
+        if (!gameObject.CompareTag("Player") && gameObject.tag != "Boss")
+        {
+            gameObject.GetComponent<EnemyPatrol>().point.GetComponent<Spawner>().DeathMonster(1);
+        }
+
         Destroy(gameObject);
+        if (gameObject.tag == "Boss")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
     void DropItems(Transform _position)
     {
