@@ -13,10 +13,13 @@ public class AttackController : MonoBehaviour
     public LayerMask damageableLayerMask;
     private Animator _animator;
     private float timer;
+    private Health playerHP;
+    public int vampirism=1;
 
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
+        playerHP = GetComponent<Health>();
     }
 
     private void Update()
@@ -35,6 +38,10 @@ public class AttackController : MonoBehaviour
                     for (int i = 0; i < enemies.Length; i++)
                     {
                         enemies[i].GetComponent<DamagebleObject>().TakeDamage(damage);
+                        if (playerHP.currentHP < playerHP.maxHP)
+                        {
+                            playerHP.currentHP += vampirism;
+                        }
                     }
                 }
 

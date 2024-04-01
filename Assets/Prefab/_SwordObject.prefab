@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7108319135268021413}
   - component: {fileID: 6123753448757505313}
   m_Layer: 8
-  m_Name: SwordObject
+  m_Name: _SwordObject
   m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6123753448757505313
 BoxCollider2D:
   m_ObjectHideFlags: 0
