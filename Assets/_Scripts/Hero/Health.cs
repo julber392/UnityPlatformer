@@ -33,7 +33,6 @@ public class Health : MonoBehaviour
 
     private void Death()
     {
-        Debug.Log("13");
         HealthChanged?.Invoke(0);
         deathScreen.DeathScreenActivate();
     }
