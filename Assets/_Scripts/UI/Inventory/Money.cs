@@ -1,5 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Money : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class Money : MonoBehaviour
         _text = GetComponentInChildren<TextMeshProUGUI>();
         _text.text = money.ToString();
     }
-
+    
     public void AddMoney(int f)
     {
         money = PlayerPrefs.GetInt("coins");

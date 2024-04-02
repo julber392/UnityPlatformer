@@ -8,6 +8,7 @@ public class HPText : MonoBehaviour
     private void Awake()
     {
         _text=GetComponent<TextMeshProUGUI>();
+        _text.text = _health.maxHP.ToString();
         _health.HealthChanged += HealthChanged;
     }
 

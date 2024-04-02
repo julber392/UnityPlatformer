@@ -26,15 +26,19 @@ public class DamagebleObject : MonoBehaviour
     private void Death()
     {
         DropItems(_transform);
-        if (!gameObject.CompareTag("Player") && gameObject.tag != "Boss")
+        if (!gameObject.CompareTag("Player") && gameObject.tag != "Boss"&& gameObject.tag != "LastBoss")
         {
             gameObject.GetComponent<EnemyPatrol>().point.GetComponent<Spawner>().DeathMonster(1);
         }
-
         Destroy(gameObject);
         if (gameObject.tag == "Boss")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (gameObject.tag == "LastBoss")
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene("Menu");
         }
     }
     void DropItems(Transform _position)

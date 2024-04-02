@@ -11,7 +11,7 @@ public class AddHp : MonoBehaviour
     }
     public void ChangeMaxHP(int newHp)
     {
-        if (_money.money > 100)
+        if (_money.money >= 100)
         {
             _money.RemoveMoney(100);
             obj.maxHP += newHp;

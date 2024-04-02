@@ -49,7 +49,6 @@ public class AttackController : MonoBehaviour
                         }
                     }
                 }
-
                 int rand = UnityEngine.Random.Range(1, 3);
                 _animator.Play("HeroAttack"+rand);
                 _animator.SetInteger("state",10);

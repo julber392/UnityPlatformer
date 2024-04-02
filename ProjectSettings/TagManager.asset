@@ -9,6 +9,7 @@ TagManager:
   - money
   - shop
   - Boss
+  - LastBoss
   layers:
   - Default
   - TransparentFX
