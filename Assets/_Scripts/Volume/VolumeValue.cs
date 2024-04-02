@@ -13,6 +13,7 @@ public class VolumeValue : MonoBehaviour
     private void Update()
     {
         audioSrc.volume = musicVolume;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SetVolume(float vol)
