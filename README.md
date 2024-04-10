@@ -3,4 +3,4 @@
 
 Ссылка на Windows билд https://disk.yandex.ru/d/onPrDMmnoV1Oxg
 
-Ссылка на скачивание unity project https://github.com/julber392/DownloadGame.git
+Ссылка на скачивание unity project https://github.com/julber392/GameDownload.git
