@@ -17852,8 +17852,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0011499524, y: -0.0011000037, z: 0}
-    m_Extent: {x: 1.00575, y: 1.0037, z: 0}
+    m_Center: {x: 0.0020999908, y: -0.002550006, z: 0}
+    m_Extent: {x: 1.0028, y: 1.00555, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -29485,7 +29485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followingTarget: {fileID: 0}
   parallaxStrength: 0.534
-  disableVerticalParallax: 0
+  disableVerticalParallax: 1
 --- !u!1 &1871701777
 GameObject:
   m_ObjectHideFlags: 0

@@ -4331,8 +4331,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.003549993, y: 0.0077500045, z: 0}
-    m_Extent: {x: 1.00405, y: 1.00175, z: 0}
+    m_Center: {x: -0.0036000013, y: -0.001150012, z: 0}
+    m_Extent: {x: 1.0063, y: 1.00135, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12819,8 +12819,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0025999546, y: 0.0024999976, z: 0}
-    m_Extent: {x: 1.0072, y: 1.0058, z: 0}
+    m_Center: {x: -0.004450023, y: 0.004949987, z: 0}
+    m_Extent: {x: 0.99795, y: 1.00295, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -15851,8 +15851,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0011499822, y: -0.0057499707, z: 0}
-    m_Extent: {x: 1.00025, y: 1.00125, z: 0}
+    m_Center: {x: 0.0014999807, y: -0.00035005808, z: 0}
+    m_Extent: {x: 0.99959993, y: 1.00215, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -22842,8 +22842,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.006850004, y: -0.00014996529, z: 0}
-    m_Extent: {x: 1.00255, y: 1.00885, z: 0}
+    m_Center: {x: 0.002700001, y: 0.0021499991, z: 0}
+    m_Extent: {x: 0.9958, y: 1.00425, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -23231,8 +23231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005700022, y: -0.00064998865, z: 0}
-    m_Extent: {x: 1.0017, y: 1.00285, z: 0}
+    m_Center: {x: 0.004499972, y: 0.0052999854, z: 0}
+    m_Extent: {x: 0.9967, y: 1.0044999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -27458,7 +27458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followingTarget: {fileID: 0}
   parallaxStrength: 0.534
-  disableVerticalParallax: 0
+  disableVerticalParallax: 1
 --- !u!1 &1871701777
 GameObject:
   m_ObjectHideFlags: 0
