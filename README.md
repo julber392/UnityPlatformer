@@ -1,2 +1,2 @@
 # UnityPlatformer
-Ссылка на билд https://disk.yandex.ru/d/37oX4lTXT9dN4g
+Ссылка на билд https://disk.yandex.ru/d/aZBM_r3eYOp0bg
